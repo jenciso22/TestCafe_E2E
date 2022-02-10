@@ -1,0 +1,37 @@
+{
+  "name": "testcafee2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "testcafe": "^1.18.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --skip-js-errors",
+    "test:chrome": "testcafe chrome ./page_objects/tests/ -s takeOnFails=true --skip-js-errors",
+    "test:safari": "testcafe safari ./page_objects/tests/ -s takeOnFails=true --skip-js-errors",
+    "test:firefox": "testcafe firefox ./page_objects/tests/ -s takeOnFails=true --skip-js-errors",
+    "test:three:browsers": "testcafe firefox,chrome,safari ./page_objects/tests/firstTest.js -s takeOnFails=true --skip-js-errors",
+    "test:allbrowsers": "testcafe all ./page_objects/tests/firstTest.js -s takeOnFails=true --skip-js-errors",
+    "test:three:parallel": "testcafe -c 3 chrome ./page_objects/tests/firstTest.js -s takeOnFails=true --skip-js-errors",
+    "test:two:parallel": "testcafe -c 2 chrome ./page_objects/tests/firstTest.js -s takeOnFails=true --skip-js-errors",
+    "test:parallel:browsers": "testcafe -c 4 chrome,safari ./page_objects/tests/firstTest.js -s takeOnFails=true --skip-js-errors",
+    "test:live:mode": "testcafe chrome ./page_objects/tests/firstTest.js -s takeOnFails=true --skip-js-errors -L",
+    "test:smoke:testing": "testcafe chrome ./page_objects/tests/ --test-meta type=smoke",
+    "test:by:name": "testcafe chrome ./page_objects/tests/hooksTest.js -t 'Second Test' ",
+    "test:headless": "testcafe chrome:headless ./page_objects/tests/firstTest.js -s takeOnFails=true --skip-js-errors",
+    "test:headless:5": "testcafe -c 5 chrome:headless ./page_objects/tests/ -s takeOnFails=true --skip-js-errors",
+    "test:chromium:device": "testcafe chrome:emulation:device=iphonex ./page_objects/tests/firstTest.js -s takeOnFails=true --skip-js-errors",
+    "test:debug:modeOnFail": "testcafe chrome ./page_objects/tests/firstTest.js -s takeOnFails=true --skip-js-errors --debug-on-fail",
+    "test:record:video": "testcafe chrome ./page_objects/tests/iframeTest.js -s takeOnFails=true --video artifacts/videos --video-options failedOnly=true --skip-js-errors"
+  },
+  "keywords": [
+    "Automation",
+    "TestCafe",
+    "Framework"
+  ],
+  "author": "Jose Enciso",
+  "license": "ISC"
+}
