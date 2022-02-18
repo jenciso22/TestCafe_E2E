@@ -7,7 +7,7 @@ fixture('Speed Test Fixture')
 
 test('Set Test Speed Test', async t => {
     await t 
-        .setTestSpeed(0.01)   // SET THE SPEED
+        .setTestSpeed(1.0)   // SET THE SPEED
         .typeText(examplePage.fieldName, 'Parker')
         .typeText(examplePage.fieldName, ' Juan')
 
